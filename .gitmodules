@@ -1,0 +1,9 @@
+[submodule "pingpong_game"]
+	path = pingpong_game
+	url = https://github.com/PavanRe001/pingpong_game.git
+[submodule "Turtle_Crossing-Game"]
+	path = Turtle_Crossing-Game
+	url = https://github.com/PavanRe001/Turtle_Crossing-Game.git
+[submodule "Guess_the_states-"]
+	path = Guess_the_states-
+	url = https://github.com/PavanRe001/Guess_the_states-.git
