@@ -7,3 +7,12 @@
 [submodule "Guess_the_states-"]
 	path = Guess_the_states-
 	url = https://github.com/PavanRe001/Guess_the_states-.git
+[submodule "hirst-Painting"]
+	path = hirst-Painting
+	url = https://github.com/PavanRe001/hirst-Painting.git
+[submodule "snake_game"]
+	path = snake_game
+	url = https://github.com/PavanRe001/snake_game.git
+[submodule "Racing_turtles"]
+	path = Racing_turtles
+	url = https://github.com/PavanRe001/Racing_turtles.git
