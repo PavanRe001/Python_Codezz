@@ -1,0 +1,2 @@
+Use the hermit's GitHub repo to get in hold of the frequency words and add that to a google sheets folder then translate using GOOGLETRANSLATE(cell-of-other-lang ,source-lang, desired-lang) and drag down to all other cells to do the same. export using .csv file and 
+use it as follows for other languages
