@@ -4,7 +4,7 @@ import datetime as dt
 import random,pandas
 #------smtp-------
 my_email="example@gmail.com" #  <--------- Use Sender's Gmail
-password="whbxkkcjdgdputxx"  #  <--------- To get the password(16) refer to Readme.md for complete process
+password="whbxkazjdgdputxx"  #  <--------- To get the password(16) refer to Readme.md for complete process
 #------datetime---
 now=dt.datetime.now()
 today_month=now.month
