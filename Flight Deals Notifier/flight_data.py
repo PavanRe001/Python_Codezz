@@ -41,6 +41,6 @@ class FlightData:
                 out_date = flight["itineraries"][0]["segments"][0]["departure"]["at"].split("T")[0]
                 return_date = flight["itineraries"][1]["segments"][0]["departure"]["at"].split("T")[0]
                 cheapest_flight = FlightData(lowest_price, origin, destination, out_date, return_date)
-                print(f"Lowest price to {destination} is £{lowest_price}")
+                print(f"Lowest price to {destination} is ₹{lowest_price}")
 
         return cheapest_flight
