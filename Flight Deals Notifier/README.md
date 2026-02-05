@@ -162,7 +162,7 @@ six_months_from_today = datetime.now() + timedelta(days=180)  # Change 180 to yo
 ## 📄 License
 
 This project is for educational purposes. Make sure to comply with API terms of service.
-This Readme.md is created using ai, Suit your needs and use the code accordingly 
+Suit your needs and use the code accordingly.
 
 ## 🤝 Contributing
 
