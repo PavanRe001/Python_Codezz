@@ -148,6 +148,7 @@ ChromeDriver will be automatically managed by Selenium 4.0+. If you're using an 
 2. Update the form URL in the script:
 ```python
 glink = 'YOUR_GOOGLE_FORM_URL_HERE'
+'[Click here to open the form](https://forms.gle/TqX465wEwizL7kTL7)'
 ```
 
 3. Update XPath selectors if your form structure differs
