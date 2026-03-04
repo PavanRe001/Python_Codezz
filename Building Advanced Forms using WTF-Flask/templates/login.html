@@ -1,0 +1,17 @@
+<!DOCTYPE HTML>
+{%  extends "base.html" %}
+{% from 'bootstrap5/form.html' import render_form %}
+<html lang="en">
+	<head>
+		<title>Login</title>
+	</head>
+	<body>
+        <div class="container">
+		<h1>Login</h1>
+        {% block content %}
+{{ render_form(form) }}
+        {% endblock %}
+
+        </div>
+	</body>
+</html>
