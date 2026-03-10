@@ -193,7 +193,7 @@ See the [LICENSE](LICENSE) file for details.
 ## 👤 Author
 
 **Your Name**  
-GitHub: [@your-username](https://github.com/PavanRe001)
+GitHub: [https://github.com/PavanRe001]
 
 ---
 
