@@ -171,16 +171,6 @@ The UI uses a **warm library theme** with the following palette:
 
 ---
 
-## 🐛 Known Bugs Fixed
-
-| Bug                      | Description                                          | Fix                                    |
-|--------------------------|------------------------------------------------------|----------------------------------------|
-| Duplicate DB inserts     | `/add` re-inserted all books on every add            | Only insert the single new book        |
-| Empty home page          | `all_books` was an in-memory list, reset on restart  | Query DB directly in `home()`          |
-| UNIQUE constraint crash  | Looping `all_books` caused duplicate title errors    | Removed the loop entirely              |
-
----
-
 ## 🤝 Contributing
 
 Contributions are welcome!
