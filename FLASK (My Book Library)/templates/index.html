@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>My Library</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Lato', sans-serif;
+      background: #f5f0e8;
+      color: #2c1a0e;
+      min-height: 100vh;
+    }
+
+    header {
+      background: linear-gradient(135deg, #3b1f0a 0%, #6b3a1f 100%);
+      color: #f5e6c8;
+      padding: 40px 20px 30px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8rem;
+      letter-spacing: 2px;
+      margin-bottom: 6px;
+    }
+
+    header p {
+      font-size: 0.95rem;
+      color: #c9a97a;
+      letter-spacing: 1px;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .empty-msg {
+      text-align: center;
+      color: #8a6a50;
+      font-size: 1.1rem;
+      margin: 60px 0;
+      font-style: italic;
+    }
+
+    .book-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 24px;
+    }
+
+    .book-card {
+      background: #fff8ee;
+      border: 1px solid #d9c4a0;
+      border-radius: 12px;
+      padding: 22px 20px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      transition: transform 0.2s, box-shadow 0.2s;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .book-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.13);
+    }
+
+    .book-card .book-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #3b1f0a;
+      line-height: 1.4;
+    }
+
+    .book-card .book-author {
+      font-size: 0.9rem;
+      color: #7a5c3a;
+      font-weight: 400;
+    }
+
+    .book-card .book-rating {
+      display: inline-block;
+      background: #f0c060;
+      color: #3b1f0a;
+      border-radius: 20px;
+      padding: 3px 12px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      width: fit-content;
+      margin-top: 4px;
+    }
+
+    .book-card .card-actions {
+      display: flex;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 7px 16px;
+      border-radius: 8px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+      letter-spacing: 0.5px;
+    }
+
+    .btn-edit {
+      background: #3b7dd8;
+      color: #fff;
+    }
+
+    .btn-edit:hover { background: #2a5ca8; }
+
+    .btn-delete {
+      background: #e74c3c;
+      color: #fff;
+    }
+
+    .btn-delete:hover { background: #c0392b; }
+
+    .add-btn-wrapper {
+      text-align: center;
+      margin: 40px 0 10px;
+    }
+
+    .btn-add {
+      background: linear-gradient(135deg, #3b1f0a, #6b3a1f);
+      color: #f5e6c8;
+      padding: 14px 34px;
+      font-size: 1rem;
+      border-radius: 50px;
+      letter-spacing: 1px;
+      text-decoration: none;
+      font-weight: 700;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      transition: transform 0.2s, box-shadow 0.2s;
+      display: inline-block;
+    }
+
+    .btn-add:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>📚 My Library</h1>
+    <p>Your personal book collection</p>
+  </header>
+
+  <main>
+    {% if not books %}
+      <p class="empty-msg">✨ Your library is empty. Start adding books!</p>
+    {% else %}
+      <div class="book-grid">
+        {% for book in books %}
+          <div class="book-card">
+            <div class="book-title">{{ book.title }}</div>
+            <div class="book-author">✍️ {{ book.author }}</div>
+            <div class="book-rating">⭐ {{ book.rating }} / 10</div>
+            <div class="card-actions">
+              <a class="btn btn-edit" href="{{ url_for('edit', id=book.id) }}">Edit Rating</a>
+              <a class="btn btn-delete" href="{{ url_for('delete', id=book.id) }}">Delete</a>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    <div class="add-btn-wrapper">
+      <a class="btn-add" href="{{ url_for('add') }}">+ Add New Book</a>
+    </div>
+  </main>
+
+</body>
+</html>
