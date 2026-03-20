@@ -117,7 +117,7 @@ Visit `http://127.0.0.1:5000` in your browser. 🎉
 ## 👤 Author
 
 **Your Name**
-- GitHub: [@your-username](https://github.com/your-username)
+- GitHub: [@PavanRe001](https://github.com/PavanRe001)
 
 ---
 
